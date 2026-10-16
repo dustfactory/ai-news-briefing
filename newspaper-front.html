@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<style>
+  @page { size: 1240px 1754px; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1240px; min-height: 1754px;
+    background: #f3eedd;
+    color: #1a1a1a;
+    font-family: 'Noto Serif CJK KR', 'Noto Serif KR', serif;
+    padding: 36px 44px 40px 44px;
+  }
+  .topbar {
+    display: flex; justify-content: space-between; align-items: baseline;
+    font-size: 20px; letter-spacing: 2px;
+    border-bottom: 5px double #1a1a1a; padding-bottom: 10px;
+  }
+  .topbar .page { font-weight: 700; }
+  .masthead { text-align: center; padding: 26px 0 8px 0; }
+  .masthead h1 {
+    font-size: 118px; font-weight: 900; letter-spacing: 34px;
+    text-indent: 34px; line-height: 1.15;
+  }
+  .masthead .tagline {
+    font-size: 21px; letter-spacing: 8px; margin-top: 6px; color: #333;
+  }
+  .masthead .meta {
+    display: flex; justify-content: space-between;
+    font-size: 19px; margin-top: 14px; padding-top: 10px;
+    border-top: 2px solid #1a1a1a;
+  }
+  .headline-block { padding: 22px 0 18px 0; border-bottom: 3px solid #1a1a1a; }
+  .kicker {
+    display: inline-block; background: #1a1a1a; color: #f3eedd;
+    font-size: 22px; font-weight: 700; letter-spacing: 6px;
+    padding: 6px 18px; margin-bottom: 14px;
+  }
+  .headline-block h2 {
+    font-size: 64px; font-weight: 900; line-height: 1.28; letter-spacing: -1px;
+  }
+  .deck { font-size: 26px; color: #333; margin-top: 12px; line-height: 1.5; }
+  .byline { font-size: 19px; color: #555; margin-top: 10px; text-align: right; }
+  .cols3 {
+    column-count: 3; column-gap: 34px; column-rule: 1px solid #999;
+    font-size: 21.5px; line-height: 1.85; text-align: justify;
+    margin-top: 16px;
+  }
+  .cols3 p { margin-bottom: 12px; text-indent: 1em; }
+  .cols3 p.lead { text-indent: 0; font-weight: 700; }
+  .sub-stories {
+    display: flex; gap: 34px; padding: 20px 0;
+    border-bottom: 3px solid #1a1a1a;
+  }
+  .sub-story { flex: 1; }
+  .sub-story + .sub-story { border-left: 1px solid #999; padding-left: 34px; }
+  .sub-story h3 { font-size: 33px; font-weight: 900; line-height: 1.35; margin-bottom: 10px; }
+  .sub-story .deck2 { font-size: 21px; color: #333; line-height: 1.55; margin-bottom: 10px; }
+  .sub-story .body { font-size: 20px; line-height: 1.8; text-align: justify; }
+  .sub-story .body p { margin-bottom: 8px; text-indent: 1em; }
+  .harness {
+    margin-top: 12px; border: 1.5px solid #1a1a1a; padding: 10px 14px;
+    font-size: 19px; line-height: 1.65; background: rgba(0,0,0,0.035);
+  }
+  .harness b { letter-spacing: 2px; }
+  .bottom-row { display: flex; gap: 34px; padding-top: 20px; }
+  .story4 { flex: 1.35; }
+  .story4 h3 { font-size: 33px; font-weight: 900; line-height: 1.35; margin-bottom: 10px; }
+  .story4 .body { font-size: 20px; line-height: 1.8; text-align: justify; }
+  .story4 .body p { margin-bottom: 8px; text-indent: 1em; }
+  .briefs {
+    flex: 1; border: 2.5px solid #1a1a1a; padding: 16px 18px;
+    font-size: 20px; line-height: 1.7; align-self: flex-start;
+  }
+  .briefs h4 {
+    font-size: 26px; font-weight: 900; letter-spacing: 6px;
+    border-bottom: 2px solid #1a1a1a; padding-bottom: 8px; margin-bottom: 10px;
+  }
+  .briefs li { list-style: none; margin-bottom: 10px; padding-left: 4px; }
+  .briefs li::before { content: "▪ "; }
+  .footer {
+    margin-top: 26px; border-top: 5px double #1a1a1a; padding-top: 10px;
+    display: flex; justify-content: space-between; font-size: 18px; color: #444;
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span>2026년 10월 16일 금요일</span>
+  <span class="page">제 1 면</span>
+</div>
+
+<div class="masthead">
+  <h1>AI일보</h1>
+  <div class="tagline">인공지능 시대의 아침 신문</div>
+  <div class="meta">
+    <span>값 1,000원</span>
+    <span>AI 뉴스 데스크 발행</span>
+    <span>www.ai-ilbo.example</span>
+  </div>
+</div>
+
+<div class="headline-block">
+  <span class="kicker">톱 뉴 스</span>
+  <h2>앤트로픽 분기 매출 168억 달러…<br>2분기 연속 흑자 달성</h2>
+  <div class="deck">전분기比 45% 성장, 연간 런레이트 670억 달러… IPO 앞둔 투자설명회 성격의 수치 공개</div>
+  <div class="cols3">
+    <p class="lead">앤트로픽이 올해 3분기 매출 168억 달러를 기록하며 2분기 연속 흑자를 달성했다.</p>
+    <p>IPO를 앞두고 투자설명회 성격으로 공개된 이번 수치는 전분기 대비 45% 성장한 것으로, 조정 영업이익률은 11%에 달했다. 연간 런레이트로 환산하면 약 670억 달러 수준으로, 오픈AI의 연간 런레이트(약 500억 달러, 보도별 수치 상이)와의 격차가 빠르게 좁혀지는 모양새다.</p>
+    <p>'성장하되 돈을 태운다'는 AI 랩의 오랜 공식이 깨지고 있다는 평가가 나온다. 엔터프라이즈 API와 구독(Claude Code 등)에서의 실제 과금이 흑자를 만들었다는 점은, AI의 수익 모델이 광고도 소비자 구독도 아닌 '개발자·기업 과금' 쪽에 있다는 방증이다.</p>
+    <p>실무적으로는 앤트로픽 API의 장기 가격 안정성을 기대할 근거가 생겼다는 해석이 나온다. 흑자의 지속 가능성과 IPO 시점·밸류에이션이 다음 관전 포인트다.</p>
+  </div>
+  <div class="byline">AI 뉴스 데스크</div>
+</div>
+
+<div class="sub-stories">
+  <div class="sub-story">
+    <h3>앤트로픽, METR에 '직원급' 평가 접근 허용</h3>
+    <div class="deck2">안전 평가 3단계 제도화… '자율 선언'에서 '제도화된 외부 검증'으로</div>
+    <div class="body">
+      <p>앤트로픽이 외부 평가 기관 METR에 자사 모델에 대한 직원 수준의 접근 권한을 부여했다. 평가 깊이에 따라 접근 권한을 차등화하는 3단계 평가자 제도를 도입한 것으로, '직원급'은 내부 테스트 환경 수준의 가장 깊은 단계다.</p>
+      <p>프론티어 모델의 평가 기준이 외부에 공개되면 그 기준이 곧 업계의 사실상 출시 체크리스트가 된다. 싱가포르 MAS SAFR 1.1 등과 같은 궤적으로, 규제의 언어가 각국에서 구체화되는 중이다.</p>
+    </div>
+    <div class="harness"><b>🔧 하네스 관점</b> — 3단계 평가자 제도는 듀얼 검수(ui_reviewer/code_reviewer)에 빌릴 아이디어다. '표면 검수→심층 검수→감사'처럼 리뷰어별 권한 레벨을 차등화하면 검수 비용과 깊이의 트레이드오프를 명시적으로 설계할 수 있다.</div>
+  </div>
+  <div class="sub-story">
+    <h3>젠슨 황 유럽 순방… "위험한 AI 기업엔 칩 공급 중단"</h3>
+    <div class="deck2">유럽 AI에 20억 달러 투자 발표… 칩 공급자의 거버넌스 선언은 이례적</div>
+    <div class="body">
+      <p>엔비디아 젠슨 황 CEO가 유럽 순방에서 유럽 AI에 20억 달러 투자를 발표했다. 영국 AI 안전 연구에는 5년간 2억5천만 달러 규모의 컴퓨팅 지원을 약속했다.</p>
+      <p>발언 수위가 주목된다. AI 속도조절론에 반대 입장을 분명히 하면서도 "위험한 AI를 만드는 기업에는 칩 공급을 중단할 수 있다"고 경고했다. 칩 공급자가 '누구에게 팔지 않겠다'고 공개 선언한 것은 이례적이며, 엔비디아가 단순 벤더를 넘어 AI 거버넌스의 실질적 행위자가 되겠다는 선언으로 읽힌다.</p>
+      <p>특정 기업·국가의 AI 인프라 접근성이 정치적 판단에 좌우될 수 있다는 점은 지정학 리스크의 새 변수다.</p>
+    </div>
+  </div>
+</div>
+
+<div class="bottom-row">
+  <div class="story4">
+    <h3>에이전트 인프라 표준화 가속… DOE '제네시스 스킬'·MCP 관측성</h3>
+    <div class="body">
+      <p>에이전트가 실험실에서 프로덕션으로 넘어가면서 '스킬'과 '관측성' 두 축에서 표준화가 진행 중이다. 미국 에너지부(DOE)가 과학 연구용 에이전트 스킬 모음 'Genesis Agent Skills'를 공개했고, Groundcover는 MCP를 경유해 프로덕션 텔레메트리에 접근하는 에이전트-투-에이전트 관측성을 내놨다.</p>
+      <p>스킬 포맷이 정부 기관까지 내려왔다는 것은 사실상 표준으로 굳어지고 있다는 신호다. 스킬을 만들 때 DOE 포맷과의 호환성을 의식하면 이식성이 올라간다.</p>
+    </div>
+    <div class="harness"><b>🔧 하네스 관점</b> — 두 건 모두 하네스 로드맵과 겹친다. guides→Agent Skills 포팅 시 DOE 스킬 구조를 레퍼런스로 삼고, Groundcover식 MCP 텔레메트리는 code_reviewer가 CI 로그·프로덕션 메트릭을 직접 읽는 패턴으로 빌릴 만하다.</div>
+  </div>
+  <div class="briefs">
+    <h4>단 신</h4>
+    <ul>
+      <li><b>Opus 6 루머</b> — 구체적 출처·스펙 모두 미확인 단계.</li>
+      <li><b>Nunchuk AI 비트코인 지갑</b> — AI 보조 셀프커스터디 지갑 등장.</li>
+      <li><b>Clash of AIs</b> — 에이전트 간 대결·벤치 형식 이벤트로 보임.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="footer">
+  <span>AI일보 · AI 뉴스 데스크</span>
+  <span>내일 아침 8시 10분 발행</span>
+</div>
+
+</body>
+</html>
