@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI 뉴스 심층 브리핑 — 2026년 10월 26일</title>
+<title>AI 뉴스 심층 브리핑 — 2026년 10월 27일</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box;}
 body { background: #3a3a38; font-family: 'Noto Serif CJK KR', 'Batang', serif;}
@@ -56,82 +56,80 @@ display: flex; justify-content: space-between;}
 <h1>AI 뉴스 <span class="red">심층 브리핑</span></h1>
 <div class="sub">DEEP DIVE · DAILY</div>
 <div class="rule-double"></div>
-<div class="dateline"><span>2026년 10월 26일 월요일</span><span>독자 · 소프트웨어 개발자 김도유</span><span>불확실한 수치는 '확인 필요'로 표시</span></div>
+<div class="dateline"><span>2026년 10월 27일 화요일</span><span>독자 · 소프트웨어 개발자 김도유</span><span>불확실한 수치는 '확인 필요'로 표시</span></div>
 </div>
 
 <div class="front">
 <div class="lead-kicker">사 설 대 신 · 오 늘 의 1 면 톱</div>
-<div class="lead-head">에이전트 3강 구도 완성… Duet, Decisions, 그리고 git을 깬 Scion</div>
-<div class="lead-deck">Anthropic이 상시 가동 에이전트 Duet을 내놨고, OpenAI는 150ms짜리 결정 API를 정식 출시했다. 한편 Anthropic 내부에서는 에이전트 때문에 git이 무너져 아예 버전 관리 시스템을 갈아엎었다.</div>
+<div class="lead-head">악성 AGENTS.md가 코딩 에이전트를 속였다</div>
+<div class="lead-deck">지시문 파일이 공격 경로가 된 날. OpenAI는 할인으로 Anthropic 고객을 빼앗고, Anthropic은 IPO를 내고 630억 달러 칩 금융을 끌어왔다.</div>
 
 <div class="cols3">
 
 <div class="story">
 <div class="seclabel"></div>
-<div class="storyhead">Claude Duet… "말 걸면 일하는" 상시 에이전트</div>
-<div class="byline">Anthropic 발표 (10월 21일) · 9to5Mac · Herald Business (10월 22~23일)</div>
-<p class="noindent">Anthropic이 Claude Duet 연구 프리뷰를 공개했다. 질문을 기다리는 챗봇이 아니라, 연결된 앱을 스스로 살피고 아침 브리핑을 가져오며, 위임받은 일을 백그라운드에서 계속하는 에이전트다. 자체 클라우드 가상 컴퓨터에서 돌아가 앱을 닫아도 일이 계속된다. 모델은 Claude Opus 5.5, 커넥터는 6,000개 이상(Gmail·Slack·Stripe·Shopify·Notion 등). 미국 Pro·Max 구독자 대상 대기자 명단 순차 초대, Team·Enterprise는 아직 제외다.</p>
-<p>안전 장치가 설계의 핵심이다. 메시지 발송·결제·서명·삭제 전에는 반드시 사용자 확인을 거치고, 증권 거래·계좌 간 송금은 승인해도 금지한다. 발신 내용에서 민감정보 유출을 걸러내는 분류기도 새로 내놨다. 단, 백그라운드 작업도 플랜 사용량에 포함돼 한도가 더 빨리 닳는다. Anthropic 스스로 "스레드를 오독하거나 긴급도를 잘못 잴 수 있다"고 인정했다.</p>
+<div class="storyhead">코딩 에이전트가 악성 AGENTS.md에 속아넘어갔다</div>
+<div class="byline">Forever Security · PrivacyNeedle (10월 26일) · CSO Online · BleepingComputer</div>
+<p class="noindent">Forever Security가 고객 기기에서 악성 AGENTS.md를 차단한 뒤 기법을 재현했다. Downloads 폴더에 심긴 13KB짜리 "Engineering Work Guidelines" 문서가, Codex에 머신 전역 설정(~/.codex/config.toml)에 공격자 MCP 서버를 등록하고, 승인·샌드박스를 우회하는 자식 세션을 실행하게 했다. 설치 대상은 MALFEX 계열 악성 npm 패키지 function-color. Codex는 90% 이상 사례에서 지시를 따랐다. 전역 설정이라 다른 폴더로 옮겨도 공격자 서버가 계속 로드된다.</p>
+<p>Claude Code 대상 시연도 성공했다. 악성 CLAUDE.md가 .claude/settings.json에 공격자 ANTHROPIC_BASE_URL을 쓰게 해, API 트래픽이 공격자 서버로 흘러 OAuth 토큰이 탈취되고 재사용됐다. 성공률은 약 50%. Forever는 "둘 다 버그가 아니라 설계대로 동작한 것"이라며, 웹이 쓸 수 있는 폴더를 신뢰하는 구조 자체가 문제라고 지적했다. 원본 파일의 유입 경로는 미확인이다.</p>
 <div class="figbox">
 <div class="t">핵심 수치</div>
-<div class="figrow"><span>모델</span><b>Claude Opus 5.5</b></div>
-<div class="figrow"><span>커넥터</span><b>6,000개+</b></div>
-<div class="figrow"><span>대상</span><b>미국 Pro·Max 대기자</b></div>
+<div class="figrow"><span>Codex 지시 이행률</span><b>90%+</b></div>
+<div class="figrow"><span>Claude Code 토큰 탈취</span><b>~50%</b></div>
+<div class="figrow"><span>공격 파일 크기</span><b>13KB</b></div>
 </div>
 <div class="harnessbox">
 <div class="t">🔧 하네스 관점</div>
-Duet의 승인 게이트 설계는 네 하네스의 리뷰어 권한 규칙과 같은 문법이다. '확인 전 금지 동작 목록 + 승인해도 금지 동작 목록'의 이중 구조를 하네스 문서에 명문화하면, 리뷰어·에이전트 역할별 권한표로 바로 쓸 수 있다. 백그라운드 작업의 사용량 계상도 하네스 운영 비용 설계에 참고할 점이다.
+네 하네스의 AGENTS.md 템플릿이야말로 이 공격의 표적 형태다. 대응은 세 가지다. 첫째, 템플릿 고정 + diff 리뷰 게이트: 에이전트가 지시문을 바꾸려 하면 리뷰어가 먼저 본다. 둘째, .env 렌더링 경로와 지시문 경로의 분리 — 설정 변경 지시는 지시문 파일이 아니라 별도 승인 채널로만. 셋째, ui/code 검수 항목에 '지시문 변경 체크'를 추가해, 리뷰 대상에 AGENTS.md·설정 파일 변경이 있으면 자동 플래그를 단다. 그리고 실무 수칙 하나: Downloads 폴더에서는 절대 에이전트를 실행하지 말 것.
 </div>
-<p><b>볼 포인트</b> ─ Team·Enterprise 확대 시기, 한국 출시 여부.</p>
+<p><b>볼 포인트</b> ─ OpenAI·Anthropic의 공식 대응, 지시문 신뢰 모델 변경 여부.</p>
 </div>
 
 <div class="story">
 <div class="seclabel"></div>
-<div class="storyhead">OpenAI Decisions API 정식 출시… 150ms의 "선택" 엔드포인트</div>
-<div class="byline">OpenAI (10월 22일 GA) · AI Weekly · EconoTimes (10월 23~24일)</div>
-<p class="noindent">OpenAI가 Decisions API를 정식 출시했다. 자유 텍스트를 생성하지 않고, 개발자가 정한 질문에 정해진 답 중 하나를 돌려주는 엔드포인트다. POST /v1/decisions, 모델은 GPT-6 Luna 전용. 질문 유형은 확률을 내는 predicate, 목록에서 고르는 choice, 순서형 루브릭으로 매기는 score 세 가지. 요청당 최대 400문항(베타 200문항에서 상향), 가격은 입력 토큰 100만 개당 $0.10, 캐시 $0.01, 출력 무료다.</p>
-<p>핵심은 속도다. 기존 1~3초짜리 호출이 100~180ms로 줄었다. OpenAI는 "Responses API 대비 약 10배"라 하고, 다음 목표는 60ms — "비디오의 매 프레임마다 API 호출"이 가능한 수준이다. 경쟁 구도가 선명하다. 이 카테고리를 만든 TypeSafe의 Jev는 수주 만에 기업가치 $7.6B가 됐고, OpenAI는 DevDay 프리뷰에서 23일 만에 GA로 밀어붙였다. 초기 고객 Speak는 액션 간 지연을 1.4초에서 0.13초로 줄였다.</p>
-<div class="harnessbox">
-<div class="t">🔧 하네스 관점</div>
-네 하네스의 리뷰어 판정(PASS/BLOCK/INCONCLUSIVE)이야말로 Decisions API의 천생 용도다. 자유 텍스트 판정을 파싱하는 대신 predicate(위반 확률)·choice(판정)·score(심각도)로 받으면, 리뷰 결과의 기계 판독성과 비용이 동시에 좋아진다. 다만 주의할 점: 결정 모델은 별도 학습 모델이 아니라 Luna를 재구성한 것이다. 판정 품질은 결국 네가 주는 답안 공간(라벨 집합)의 설계에 달려 있다.
+<div class="storyhead">OpenAI, 벤치마크가 아니라 "할인"으로 고객을 빼앗는다</div>
+<div class="byline">The Information (10월 24일) · 조선비즈 · Aju Press (10월 26일)</div>
+<p class="noindent">OpenAI가 Codex 등 기업용 모델을 정가 대비 20~30% 이상 깎아주며 Anthropic 고객을 빼앗고 있다. Rippling은 5월 Anthropic 57%·OpenAI 16%에서 지금은 OpenAI 52%·Anthropic 18%로 뒤집혔다. CEO Parker Conrad는 "비용을 줄이기 위해 바꿨다"고 했다. Replit은 연 1억 달러 이상 계약에서 30% 이상 할인을 받고 주력 모델을 OpenAI로 바꿨다. DataCamp는 40% 할인을 받았다. 반면 Anthropic은 계약 총액을 늘리지 않으면 기존 할인을 연장해주지 않는다는 정책이다.</p>
+<p>가격 전쟁의 본질은 여유 자금이다. Anthropic 2분기 컴퓨팅 비용 $56억(매출 $115억의 절반 미만)인데, OpenAI는 올해 컴퓨팅 지출이 매출을 크게 웃돌 것으로 예상하면서도 점유율 매입에 나서고 있다. IPO를 앞둔 Anthropic으로선 할인 맞대응이 곧 마진 압박이다. Anthropic의 3분기 기업 시장 성장률은 45%로 둔화됐지만 여전히 높다.</p>
+<div class="figbox">
+<div class="t">핵심 수치</div>
+<div class="figrow"><span>Rippling OpenAI 비중</span><b>16% → 52%</b></div>
+<div class="figrow"><span>Replit 계약 할인</span><b>30%+</b></div>
+<div class="figrow"><span>DataCamp 할인</span><b>40%</b></div>
 </div>
-<p><b>볼 포인트</b> ─ 60ms 목표 달성 여부, Jev와의 벤치마크 대결.</p>
+<p><b>볼 포인트</b> ─ Anthropic IPO 이후 가격 정책 변화, 할인 만료 후 이탈 여부.</p>
 </div>
 
 <div class="story">
 <div class="seclabel"></div>
-<div class="storyhead">에이전트가 git을 부쉈다… Anthropic, 버전 관리 자체를 교체</div>
-<div class="byline">Flowtivity 분석 (10월 15일)</div>
-<p class="noindent">Anthropic 내부 코딩 에이전트의 병합량이 2026년 5월 하루 2,500건에서 9월 3만 건으로 12배 뛰면서, 인간 규모로 설계된 git이 병목이 됐다. 7명의 엔지니어가 5개월 만에 Scion이라는 사내 버전 관리 시스템을 만들고 모노레포를 git에서 완전히 이주시켰다. 모든 커밋·리베이스·병합이 서버에서 일어나고, 체크아웃은 희소·가상화되며, blame·이력은 API로 답한다. 결과: 변경당 소스 관리 시간 34분에서 3.7분으로 9.2배 단축, 인프라 규모 200분의 1, CI CPU 용량 25% 확보.</p>
-<p>교훈은 분명하다. 에이전트 시대의 병목은 모델이 아니라 인간용 도구다. 멀티 에이전트 워크플로우가 3~10배 토큰을 먹는다는 비용 문제와 함께, 버전 관리·CI·리뷰 파이프라인 전체가 에이전트 규모를 전제로 다시 설계돼야 한다. 참고로 구글의 동명 오픈소스 오케스트레이션 테스트베드(google-deepmind/scion)와는 다른 시스템이다. 이름이 같아 헷갈리기 쉽다.</p>
+<div class="storyhead">Anthropic IPO 제출… Broadcom 칩에 630억 달러 금융</div>
+<div class="byline">Reuters (10월 26일) · Morningstar · WSJ</div>
+<p class="noindent">Anthropic이 10월 26일 IPO 서류를 공개 제출했다. WSJ 보도 기준 기업가치는 $1.5T~$2T로, 사상 최대급이 될 수 있다. 같은 날 BofA·Blackstone·Citi·Morgan Stanley가 Broadcom AI 칩·네트워킹 장비 구매를 위해 $63B 금융을 제공한다고 발표했다. 특수목적법인(SPV)이 장비를 사서 Anthropic에 리스하는 구조다. BofA·Citi·MS가 선순위, Blackstone이 후순위 확정분을 맡고, Broadcom이 선순위 규모만큼 잔존가치 보증을 제공한다. 인도분은 2027년부터다.</p>
+<p>이전에도 Apollo·Blackstone이 $35B 규모의 Anthropic 컴퓨팅 확장을 금융한 바 있다. 모델 기업이 부채로 인프라를 확보하는 단계에 들어섰다는 뜻이다. 동시에 Anthropic은 10/24 브리핑의 $80.7B 상반기 순손실(대부분 전환사채 비현금 비용) 공시와 보안 사고 이력을 안고 상장을 추진한다. 투자자 appetite가 시험대에 올랐다.</p>
 <div class="figbox">
 <div class="t">핵심 수치</div>
-<div class="figrow"><span>일 병합량</span><b>2,500 → 30,000건</b></div>
-<div class="figrow"><span>변경당 소스 관리 시간</span><b>34분 → 3.7분</b></div>
-<div class="figrow"><span>이주 기간·인원</span><b>5개월 · 7명</b></div>
+<div class="figrow"><span>칩 금융 규모</span><b>$63B</b></div>
+<div class="figrow"><span>IPO 목표 가치</span><b>$1.5~2T (보도)</b></div>
+<div class="figrow"><span>인도 시작</span><b>2027년</b></div>
 </div>
-<div class="harnessbox">
-<div class="t">🔧 하네스 관점</div>
-네 하네스의 듀얼 리뷰어 구조도 같은 질문을 받게 된다. 에이전트 병합량이 10배가 되면 리뷰 큐·증거 수집·before/after 이미지 검증이 어디서 터지는가. Scion의 답은 '인프라를 에이전트 규모로 바꾸는 것'이었다. 하네스에도 리뷰 요청의 우선순위 큐와 자동 증거 수집(브라우저 조작 결과 자동 캡처) 같은 설계가 필요하다.
-</div>
-<p><b>볼 포인트</b> ─ Scion의 외부 공개 여부, 타사 에이전트 규모 팀의 유사 사례.</p>
+<p><b>볼 포인트</b> ─ 11월 9일 주 로드쇼 여부, S-1 본문의 손실·보안 공시 세부.</p>
 </div>
 
 </div><!-- /cols3 -->
 
 <hr class="rule">
 
-<div class="briefhead">📌 단신 · 이번 주 볼 것</div>
+<div class="briefhead">📌 단신</div>
 <div class="briefs">
-■ <b>영국 AI 안전 예산안 10/28 확정</b> ─ 지난 브리핑의 £600M 패키지 최종안. 바이오보안 랩 운영 주체 주목. <span style="color:#888;font-size:12px">Reuters (10월 24일)</span><br>
-■ <b>Anthropic IPO 로드쇼 11월 9일 주 예정 보도</b> ─ 11월 중순 상장, 목표 가치 $2T. 아직 확인 필요. <span style="color:#888;font-size:12px">WSJ 보도 인용 (10월 24일 브리핑)</span><br>
-■ <b>Decisions API, Vercel AI Gateway에서도 사용 가능</b> ─ base URL·모델 ID만 바꾸면 전환. Jev·Liquid d1 등과 함께 제공. <span style="color:#888;font-size:12px">Vercel Changelog</span>
+■ <b>Kimi K3.1 Pro 가중치 11/4 공개 예정</b> ─ 10/24 브리핑 후속. API-only 상태에서 오픈 가중치 전환 시 독립 벤치마크 확인 필요. <span style="color:#888;font-size:12px">Moonshot AI</span><br>
+■ <b>Cadence Maestro</b> ─ 칩 설계 전용 AI, 품질 30%↑·토큰 5배 주장, Q4 얼리 액세스. 비교 대상 익명 — 확인 필요. <span style="color:#888;font-size:12px">10월 26일</span><br>
+■ <b>한국: SKT 첫 AI 거버넌스 보고서</b> ─ 과기정통부 AI for All 브랜드 공모 11/6 마감·11/16 발표. <span style="color:#888;font-size:12px">10월 26일</span>
 </div>
 
 </div><!-- /front -->
 
 <div class="colophon">
-<span>AI 뉴스 심층 브리핑 · 템플릿 v2 (신문 지면형) · 2026-10-26</span>
+<span>AI 뉴스 심층 브리핑 · 템플릿 v2 (신문 지면형) · 2026-10-27</span>
 <span>매일 아침 08:10 KST 발행</span>
 </div>
 
