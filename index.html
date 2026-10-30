@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI 뉴스 심층 브리핑 — 2026년 10월 30일</title>
+<title>AI 뉴스 심층 브리핑 — 2026년 10월 31일</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box;}
 body { background: #3a3a38; font-family: 'Noto Serif CJK KR', 'Batang', serif;}
@@ -56,72 +56,72 @@ display: flex; justify-content: space-between;}
 <h1>AI 뉴스 <span class="red">심층 브리핑</span></h1>
 <div class="sub">DEEP DIVE · DAILY</div>
 <div class="rule-double"></div>
-<div class="dateline"><span>2026년 10월 30일 금요일</span><span>독자 · 소프트웨어 개발자 김도유</span><span>불확실한 수치는 '확인 필요'로 표시</span></div>
+<div class="dateline"><span>2026년 10월 31일 토요일</span><span>독자 · 소프트웨어 개발자 김도유</span><span>불확실한 수치는 '확인 필요'로 표시</span></div>
 </div>
 
 <div class="front">
 <div class="lead-kicker">사 설 대 신 · 오 늘 의 1 면 톱</div>
-<div class="lead-head">1조 파라미터가 열렸다, 하네스는 진화한다</div>
-<div class="lead-deck">Mistral Large 4 오픈 웨이트, LangChain의 브라우저 에이전트, 모델을 건드리지 않고 하네스만 학습시키는 Hermit, 그리고 OpenAI의 새 행동 헌장.</div>
+<div class="lead-head">하네스가 제품이 되고, 옵트아웃이 한 줄이 된다</div>
+<div class="lead-deck">MS Copilot 하네스의 Foundry 공개, 4대 랩의 공통 학습 옵트아웃, 국방망에 개인 에이전트를 연결한 사건, 그리고 KT의 토큰팩토리.</div>
 
 <div class="cols3">
 
 <div class="story">
 <div class="seclabel"></div>
-<div class="storyhead">Mistral Large 4 'Le Chonk' 오픈 웨이트 공개</div>
-<div class="byline">Mistral AI (10월 29일) · Unite.AI · TestingCatalog</div>
-<p class="noindent">Mistral이 1조 파라미터급 플래그십 Mistral Large 4의 가중치를 공개했다. 10월 6일 API 프리뷰 이후 3주간의 추가 강화학습을 거쳐 코딩과 방어적 사이버 보안에서 큰 폭의 향상을 이뤘다고 한다. 네이티브 멀티모달 MoE로, 토큰당 활성 파라미터는 약 52B, 컨텍스트는 1M 토큰이다.</p>
-<p>벤치마크는 자사 발표 기준이다. FrontierCode 2.0에서 19.7%로 오픈 웨이트 1위, Coding Agent Index 48%로 GLM-5.3과 동점이면서 태스크당 토큰은 47% 적게 쓰고, Terminal-Bench 4.0은 프리뷰 28%에서 41%로 올랐다. 사이버 인덱스 51%, 악성 사이버 요청 거부율 평균 96.6%도 내세웠다. 독립 검증은 아직 전이다. 라이선스는 수정 MIT로, 상용·파인튜닝은 자유지만 Model-as-a-Service 재판매는 별도 라이선스가 필요하다. API 가격은 입력 $0.70/캐시 $0.07/출력 $2.10 per 1M 토큰, NVFP4 양자화 버전은 B200·B300 4장으로 돌릴 수 있다고 한다.</p>
-<div class="figbox">
-<div class="t">핵심 수치</div>
-<div class="figrow"><span>총 / 활성 파라미터</span><b>1조 / 52B</b></div>
-<div class="figrow"><span>Terminal-Bench 4.0</span><b>41% (전 28%)</b></div>
-<div class="figrow"><span>API 가격</span><b>$0.70 / $2.10</b></div>
-</div>
-<p><b>볼 포인트</b> ─ 독립 벤치마크 검증, NVFP4 자가 호스팅 실측, 사이버 특화 변형의 파트너 공개 여부.</p>
-</div>
-
-<div class="story">
-<div class="seclabel"></div>
-<div class="storyhead">LangChain, 에이전트에 브라우저를 달다</div>
-<div class="byline">LangChain (10월 29일) · Superpower Daily</div>
-<p class="noindent">LangChain이 Managed Deep Agents v0.10을 공개 베타로 내놨다. 핵심은 두 가지다. 첫째, 브라우저 사용 기능. API가 없는 사이트의 예약·폼 확인 같은 일을 에이전트가 직접 클릭해서 처리한다. define_browser(scope="thread", idle_ttl_seconds=600) 한 줄로 선언하면 snapshot·run·screenshot·handoff 네 가지 도구가 자동 추가된다. 브라우저는 LangSmith 샌드박스에서 원격으로 돌고, 스레드마다 별도라 쿠키·로그인이 섞이지 않는다.</p>
-<p>둘째, 비동기 서브에이전트와 사람 인계(handoff)다. 로그인 벽이나 2차 인증에 막히면 에이전트가 browser_handoff(reason)를 호출하고, 사람은 링크로 원격 브라우저를 열어 직접 로그인한 뒤 제어권을 돌려준다. 비밀번호는 모델 메시지·트레이스에 남지 않고, 링크는 15분 만료다. API가 있으면 API를 쓰라는 게 LangChain의 권고다. 브라우저는 API의 빈틈을 메우는 용도다.</p>
+<div class="storyhead">MS Copilot 하네스, Foundry로 외부 공개</div>
+<div class="byline">Microsoft (10월 28일) · Unite.AI · The New Stack</div>
+<p class="noindent">GitHub Copilot과 Copilot Studio를 굴리는 엔진, Microsoft Copilot 하네스가 Foundry Agent Service에서 공개 프리뷰로 외부에 열렸다. 하네스란 모델 주변의 모든 것. 지시문, 컨텍스트, 실행 환경, 통제 장치를 묶은 오케스트레이션 계층이다. GitHub 엔지니어들이 만들고 MS 전 제품에 표준화한 것으로, 20개 이상의 프론티어 모델과 MCP·에이전트 스킬·플러그인을 지원한다. 런타임은 Rust로 포팅해 세션 오버헤드와 첫 토큰 시간을 줄였다고 한다.</p>
+<p>조건을 봐야 한다. 관리형 하네스는 생성 시에만 선택 가능하고, 나중에 바꿀 수 없다. 외부 모델 반입(BYOM)은 관리형에서는 미지원이고, 키 반입(BYOK)은 SDK 쪽에 있다. 기본 내장 도구는 파일 읽기·쓰기·셸·웹 fetch·서브에이전트 5종이다. 요금은 12월 1일부터 샌드박스 기준 vCPU 시간당 $0.0994, 메모리 GiB 시간당 $0.0118로, 1vCPU+1GiB를 한 달 내내 돌리면 약 $80 수준이다. 모델 추론비는 별도다. 긴 작업·장시간 복원력은 정식 출시됐다.</p>
 <div class="harnessbox">
 <div class="t">🔧 하네스 관점</div>
-네 하네스의 ui_reviewer 규칙 14("바뀐 UI를 직접 조작해 전후 이미지로 증명")와 같은 맥락이다. 브라우저 도구를 리뷰어의 증거 수단으로 붙일 때, LangChain의 패턴이 참고된다. 스레드별 격리 브라우저, 스냅샷 ID 기반 조작, 사람 인계 시 비밀번호 비노출 원칙이 그대로 적용 가능하다. 단, 리뷰어는 로그인 인계가 아니라 읽기 전용 세션을 기본으로 해야 한다.
+네 하네스와 정반대 방향의 제품화다. 네 것은 .env 렌더링 + 듀얼 리뷰어라는 얇고 투명한 계약이고, MS 것은 샌드박스·정책·모델 라우팅까지 통째로 관리해 주는 두꺼운 런타임이다. 참고할 점은 세 가지다. 하네스 선택의 비가역성(생성 시 고정), 기본 도구 5종의 최소 집합, 그리고 "단순 작업엔 하네스가 오히려 지연·비용"이라는 MS 자체 권고. 네 리뷰어에도 "복잡도에 따라 하네스 강도를 달리한다"는 원칙으로 가져올 만하다.
 </div>
-<p><b>볼 포인트</b> ─ 비동기 서브에이전트 실측, handoff UX의 실제 전환율, 샌드박스 비용.</p>
-</div>
-
-<div class="story">
-<div class="seclabel"></div>
-<div class="storyhead">Hermit… 모델도 하네스도 얼리고 어댑터만 학습</div>
-<div class="byline">Infini-AI-Lab v0.1.0 (10월 25일) · MarkTechPost</div>
-<p class="noindent">Infini-AI-Lab이 오픈소스 하네스 어댑터 프레임워크 Hermit v0.1.0을 냈다. 아이디어가 선명하다. 모델도, 하네스도 건드리지 않고, 바깥에 붙는 '하네스 어댑터'만 학습시켜 Codex나 Claude Code를 새 태스크에 맞춘다. 파인튜닝도, 하네스 포크도 필요 없다. Python 프레임워크로 자체 파라미터는 없고, Apache-2.0에 pip install hermit-harness로 설치한다.</p>
-<p>학습은 RL식 루프다. 트레이너가 현재 어댑터를 단 에이전트로 태스크 배치를 돌리고, 저지가 채점해 어댑터를 진화시킨다. 진화 방법 5종이 내장됐다. GEPA·SkillOpt·MetaWorld Model(MWM)·Harness²·Continual Harness. GLM 5.3 Flash 기준 CL-Bench 데이터베이스 탐색에서 MWM 어댑터가 0.795로, 인컨텍스트 베이스라인 0.580을 크게 앞섰다. 단, 대부분 단일 자가 보고 실행이라 반복 검증이 필요하다. 백엔드는 API 일체와 로컬 vLLM·SGLang·Ollama를 지원한다.</p>
-<div class="figbox">
-<div class="t">핵심 수치</div>
-<div class="figrow"><span>CL-Bench (MWM)</span><b>0.795 vs 0.580</b></div>
-<div class="figrow"><span>라이선스 / 설치</span><b>Apache-2.0</b></div>
-<div class="figrow"><span>지원 하네스</span><b>Codex·Claude·Pi</b></div>
-</div>
-<p><b>볼 포인트</b> ─ 반복 실험 결과, ui/code 리뷰어 태스크로의 전이, 어댑터 버전 관리·감사 패턴.</p>
+<p><b>볼 포인트</b> ─ 12월 1일 과금 후 실제 비용, BYOM 지원 여부, 국내 리전 포함 여부(현재 9개 지원 리전에 인도·동남아 없음).</p>
 </div>
 
 <div class="story">
 <div class="seclabel"></div>
-<div class="storyhead">OpenAI Model Spec, 다섯 가지 가치로 재편</div>
-<div class="byline">OpenAI (10월 29일) · Reuters · Unite.AI</div>
-<p class="noindent">OpenAI가 Model Spec을 개정했다. 모델이 어떻게 행동해야 하는지를 설명하는 공개 문서가 이제 다섯 가지 가치 중심으로 재편됐다. 인간 의도에 대한 충실성, 위해 최소화, 정직과 투명성, 인간 주체성 촉진, 배려다. 토대는 '인간 의도에 대한 충실성'으로, 지시를 글자대로 따르는 게 아니라 사용자와 개발자, OpenAI가 의도하고 가치 있게 여기는 바를 이해하라는 뜻이다.</p>
-<p>실무적으로 중요한 변화도 있다. 상세한 스타일 지침 대부분이 은퇴했고, 맥락·감독·주체성에 대한 새 지침과 일부 행동 기본값 조정이 들어갔다. 지시 충돌 시 플랫폼→개발자→사용자 지시 우선순위(지시 계층)도 명문화됐다. OpenAI 스스로 현행 모델이 새 Spec을 완전히 반영하진 못한다고 밝혔고, 원칙을 내면화하는 새 학습법을 모색 중이라고 했다. Anthropic의 헌법적 AI와 같은 계보의 공개 가치 프레임워크 경쟁이다. Spec은 의도의 선언이고, 준수율은 별개 문제라는 점은 기억해야 한다.</p>
+<div class="storyhead">학습 옵트아웃, 이제 한 줄이면 된다</div>
+<div class="byline">OpenAI·Google·Microsoft·Anthropic (10월 30일) · The Verge · Google Search Central</div>
+<p class="noindent">4대 랩이 공통의 AI 학습 옵트아웃 신호를 받기로 했다. robots.txt에 User-Agent: __usage_ai-training + Disallow: / 두 줄이면, 참여 기업 전체에 학습 제외 의사를 한 번에 밝히는 셈이다. 지금까지는 GPTBot·Google-Extended·ClaudeBot 등 크롤러마다 따로 막아야 했다. 근거 문서는 Anthropic의 Kevin Kelley가 쓴 IETF 개인 초안 "Machine-Readable Training Preference Signal"(10월 30일, 만료 2027년 5월 3일)로, 아직 정식 표준이 아니고 자발적 신호다.</p>
+<p>일정이 제각각이다. Anthropic은 이미 구현 시작, OpenAI는 "수개월 내", Microsoft는 2027년 2월 1일, Google은 2027년 목표다. 주의할 점도 많다. 학습만 막을 뿐 크롤링·검색·AI 답변 인용은 막지 못한다. 이미 수집·학습된 데이터는 소급 제거되지 않는다. 와일드카드 User-Agent: *는 정책 토큰과 매칭되지 않으며, 토큰이 없는 파일은 어떤 선호도 표명한 게 아니다. Microsoft는 학습과 별도로 AI Grounding 설정까지 추가했고, NoArchive·NoCache 사용자는 2027년 3월 1일까지 전환해야 한다.</p>
 <div class="figbox">
 <div class="t">핵심 수치</div>
-<div class="figrow"><span>가치</span><b>5가지</b></div>
-<div class="figrow"><span>은퇴</span><b>상세 스타일 지침</b></div>
-<div class="figrow"><span>이전 준수율</span><b>80%대 중후반</b></div>
+<div class="figrow"><span>Anthropic</span><b>구현 시작</b></div>
+<div class="figrow"><span>Microsoft</span><b>2027-02-01</b></div>
+<div class="figrow"><span>Google / OpenAI</span><b>2027년 / 수개월 내</b></div>
 </div>
-<p><b>볼 포인트</b> ─ Model Spec Evals 후속 수치, 지시 계층의 실제 충돌 판정 사례.</p>
+<p><b>볼 포인트</b> ─ AIPREF 작업반의 초안 진전, Meta·Common Crawl 등 추가 참여 여부, 실제 크롤러 반영 검증.</p>
+</div>
+
+<div class="story">
+<div class="seclabel"></div>
+<div class="storyhead">국방망에 개인 Claude Code를 연결한 사건</div>
+<div class="byline">WIRED (10월 30일) · Accenture 반박 포함</div>
+<p class="noindent">WIRED 보도에 따르면 Accenture 소속 계약직원이 미 국방부의 중앙 시스템을 개인 Claude Code 계정에 연결했다. 에이전트에 자신의 로그인 정보를 넘겨 관리자 권한을 얻게 하고, 보안 통제를 우회해 자동 코딩과 클라우드 서버 개설을 시켰다는 것이다. 에이전트는 국방망에서 약 2개월간 동작했고, 그 과정에서 로그인 정보·비밀번호와 NIPRNet(비기밀망) 네트워크 지도가 NIST 고위험 지정된 제3자 사이트로 전송된 것으로 보인다고 한다. 시스템에는 통제 비기밀정보(CUI)가 있었다.</p>
+<p>양측 입장이 갈린다. Accenture는 "철저하고 독립적인 조사 결과 근거 없음"이라고 했고, 국방부는 "네트워크나 시스템 상태에 대해 언급하지 않는다"고 했다. 국방부 직원은 현재 Claude 사용이 금지된 상태라고 한다. 배경도 있다. Anthropic은 대규모 감시·완전 자율무기 용도 제한을 고수하다 국방부로부터 공급망 위험 기업 지정을 받았고, 법정 공방이 진행 중이다. 개인 계정 에이전트에 자격증명을 넘기는 행위가 조직의 통제 밖에서 어떻게 사고가 되는지 보여주는 사례다.</p>
+<div class="figbox">
+<div class="t">핵심 수치</div>
+<div class="figrow"><span>에이전트 동작 기간</span><b>약 2개월</b></div>
+<div class="figrow"><span>보고 의무</span><b>72시간 내</b></div>
+<div class="figrow"><span>Accenture 연방 계약</span><b>$35억+</b></div>
+</div>
+<p><b>볼 포인트</b> ─ 국방부·Accenture의 추가 입장, 72시간 보고 의무 위반 여부 판정, 계약직 에이전트 사용 통제 강화 여부.</p>
+</div>
+
+<div class="story">
+<div class="seclabel"></div>
+<div class="storyhead">KT 토큰팩토리… 500종 모델을 한 API로</div>
+<div class="byline">KT (10월 27일 공개, 10월 30일 출시) · 연합뉴스 · 한국경제</div>
+<p class="noindent">KT가 AI 모델 통합 플랫폼 '토큰팩토리'를 10월 30일 기업 고객 대상으로 출시했다. 모델 선택부터 가입·사용량 확인·비용 관리·결제까지 한곳에서 처리한다. 핵심은 자체 개발한 '오토 모델 라우터'로, 질문의 업무 유형·난이도·요구 품질·비용을 분석해 적합한 모델을 자동 선택한다. KT는 RouterArena 종합 1위를 주장한다. 한국어 특성을 반영한 프롬프트 압축으로 입력 토큰을 줄이고, 라우터와 압축을 함께 쓰면 토큰 최대 25% 절감이 가능하다고 한다.</p>
+<p>규모를 정확히 봐야 한다. 출시 시점은 KT 데이터센터 직접 구동 7종 + 글로벌 66종 = 총 73종이고, OpenRouter와의 국내 첫 공식 파트너십을 통해 연말까지 500종 이상으로 확대한다는 계획이다. 내년 3월에는 개인 개발자·일반 이용자로 넓히고 구독형 요금제를 낸다고 한다. 과금은 통신 과금 방식을 응용한 토큰 상세기록(TDR)으로 부서·모델별 사용량을 나눠 보고, 국내 데이터센터 추론으로 데이터 주권 우려를 줄인다는 구상이다. 단, 토큰 절감률이 곧 요금 절감률은 아니다.</p>
+<div class="figbox">
+<div class="t">핵심 수치</div>
+<div class="figrow"><span>출시 시점 모델 수</span><b>73종</b></div>
+<div class="figrow"><span>연말 목표</span><b>500종+</b></div>
+<div class="figrow"><span>토큰 절감 주장</span><b>최대 25%</b></div>
+</div>
+<p><b>볼 포인트</b> ─ 연말 500종 달성 여부, 라우터의 독립 검증, 내년 3월 개인 요금제 조건.</p>
 </div>
 
 </div><!-- /cols3 -->
@@ -130,14 +130,14 @@ display: flex; justify-content: space-between;}
 
 <div class="briefhead">📌 단신</div>
 <div class="briefs">
-■ <b>서울시 청년 AI 성장권 266억 원</b> ─ 2027년 예산안에 편성, 청년 50만 명에게 생성형 AI 이용권 + 수준별 교육. 지난달 추경 전액 삭감 후 재추진. <span style="color:#888;font-size:12px">동아일보·연합뉴스 (10월 29일)</span><br>
-■ <b>중소 제조 피지컬 AI 5조 원+ 전략</b> ─ 2030년까지 DX 3만 개·AX 6,000개 목표, DX율 30%→50%, AI 도입률 1%→10%. <span style="color:#888;font-size:12px">중기부 (10월 29일)</span>
+■ <b>GitHub Copilot SDK → Microsoft Copilot SDK로 개명</b> ─ Foundry 하네스 공개와 함께 SDK 이름 변경. <span style="color:#888;font-size:12px">GitHub 변경 로그 (10월 28일)</span><br>
+■ <b>KT 토큰팩토리, 내년 3월 개인 확대</b> ─ 개인 개발자·일반 이용자 대상 + 구독형 요금제 예고. <span style="color:#888;font-size:12px">KT (10월 27일)</span>
 </div>
 
 </div><!-- /front -->
 
 <div class="colophon">
-<span>AI 뉴스 심층 브리핑 · 템플릿 v2 (신문 지면형) · 2026-10-30</span>
+<span>AI 뉴스 심층 브리핑 · 템플릿 v2 (신문 지면형) · 2026-10-31</span>
 <span>매일 아침 08:10 KST 발행</span>
 </div>
 
