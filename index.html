@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI 뉴스 심층 브리핑 — 2026년 11월 3일</title>
+<title>AI 뉴스 심층 브리핑 — 2026년 11월 4일</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box;}
 body { background: #3a3a38; font-family: 'Noto Serif CJK KR', 'Batang', serif;}
@@ -56,74 +56,89 @@ display: flex; justify-content: space-between;}
 <h1>AI 뉴스 <span class="red">심층 브리핑</span></h1>
 <div class="sub">DEEP DIVE · DAILY</div>
 <div class="rule-double"></div>
-<div class="dateline"><span>2026년 11월 3일 화요일</span><span>독자 · 소프트웨어 개발자 김도유</span><span>불확실한 수치는 '확인 필요'로 표시</span></div>
+<div class="dateline"><span>2026년 11월 4일 수요일</span><span>독자 · 소프트웨어 개발자 김도유</span><span>불확실한 수치는 '확인 필요'로 표시</span></div>
 </div>
 
 <div class="front">
 <div class="lead-kicker">사 설 대 신 · 오 늘 의 1 면 톱</div>
-<div class="lead-head">중국 아이폰의 두뇌는 Qwen이 된다</div>
-<div class="lead-deck">애플 인텔리전스의 중국판 Qwen 탑재, 크래프톤의 로봇 AI 루디 0.2, 그리고 DeepSeek 하네스의 크리에이터 모드.</div>
+<div class="lead-head">에이전트 코딩의 병목은 Git으로 옮겨갔다</div>
+<div class="lead-deck">OpenAI의 Git 백엔드 Pando, DeepSeek의 상주형 슈퍼에이전트, ElevenLabs의 음성 단일 모델, 그리고 오늘 시작된 중국판 애플 인텔리전스 베타.</div>
 
 <div class="cols3">
 
 <div class="story">
 <div class="seclabel"></div>
-<div class="storyhead">애플 인텔리전스 중국판… Qwen 탑재 확정</div>
-<div class="byline">Apple 중국 뉴스룸 · Alibaba (10월 31일) · Xinhua · China Daily</div>
-<p class="noindent">애플이 2년 넘게 미뤄온 중국 내 애플 인텔리전스 출시 일정을 확정했다. 알리바바의 Qwen이 중국 사용자의 Siri, 글쓰기 도구, 비주얼 인텔리전스에 들어간다. 개발자 베타 테스트는 11월 4일부터, 정식 출시는 12월 iOS 27.3과 함께다. 대상은 중국에서 구매한 애플 인텔리전스 지원 아이폰, 또는 기기 위치와 애플 계정 국가·지역이 모두 중국으로 설정된 사용자다. 지원 기종은 아이폰 15 Pro·Pro Max, 아이폰 16 이후, 아이폰 Air, 아이폰 Duo이며, 기기와 Siri 언어는 영어 또는 간체 중국어로 설정해야 한다.</p>
-<p>구조상 중요한 점은 두 가지다. 첫째, 앱은 모델을 고르지 않는다. 중국 외 지역에선 같은 표면이 ChatGPT로, 중국에선 Qwen으로 라우팅된다. 결정하는 건 기기·위치·계정 지역이다. 둘째, Qwen 연동은 옵트인이다. 사용자가 직접 활성화하고 공유 정보를 선택하며, 전송 전에 허락을 받는다. 알리바바는 사용자 요청과 생성 응답을 모델 학습에 쓰지 않는다고 밝혔다. 다만 첫 출시 범위는 부분적이다. WWDC 2026에서 발표한 차세대 Siri AI와 이미지 생성 도구는 포함되지 않고, 실시간 번역·사진 정리·알림 요약·글쓰기 보조 같은 1차 기능이 중심이다. 어떤 Qwen 모델인지, 정부 승인이 모델 업데이트에 어떻게 적용되는지는 공개되지 않았다.</p>
+<div class="storyhead">OpenAI 'Pando'… Git을 버리지 않고 받아내다</div>
+<div class="byline">OpenAI 엔지니어링 포스트 (11월 2일) · Interesting Engineering</div>
+<p class="noindent">OpenAI가 모노레포용 Git 백엔드 Pando를 공개했다. 계기는 Codex다. 마스터 커밋이 2024년 1분기 대비 2026년 3분기 1,378% 증가했고, 4분기 추정치는 2,442%에 달한다. 한 엔지니어가 여러 변경을 동시에 굴리고 각 푸시가 CI 체크아웃을 대량으로 유발하면서, 기존 시스템은 한때 머지 신뢰도가 90% 아래로 떨어지기도 했다. Pando는 2026년 4월부터 프로덕션에서 돌고 있고, Rust로 10주 만에 만들었으며 핵심 설계는 엔지니어 1명, 구현은 에이전트 팀이 맡았다고 한다.</p>
+<p>설계의 요지는 Git 클라이언트와 워크플로는 그대로 두고 서버 뒤쪽만 갈아엎은 것이다. 저장소 전체 순서를 강제하지 않고 브랜치별 인과 일관성으로 병렬 처리하고, 동일 ref에 대한 푸시만 원자적 비교·교환으로 직렬화한다. 팩파일 재사용과 LSM식 백그라운드 컴팩션으로 읽기 부하를 줄이고, 캐시 적중률은 99%를 넘는다고 한다. 결과 수치(자사 발표): 푸시 중앙값 지연 약 80% 감소, 머지 신뢰도 99.99%, 하루 약 1PB의 Git 데이터 서빙, 한 시간에 57TB 이상 처리. 흥미로운 대조는 Anthropic이 10월에 Git 자체를 버리고 Scion으로 교체한 반면, OpenAI는 Git을 유지하고 백엔드만 교체했다는 점이다. 같은 강제 요인에 대한 정반대 해법이다.</p>
 <div class="figbox">
-<div class="t">핵심 일정</div>
-<div class="figrow"><span>개발자 베타</span><b>11월 4일</b></div>
-<div class="figrow"><span>정식 출시</span><b>12월 iOS 27.3</b></div>
-<div class="figrow"><span>제외 기능</span><b>차세대 Siri AI</b></div>
+<div class="t">핵심 수치 (자사 발표)</div>
+<div class="figrow"><span>커밋 증가 (26년 3분기)</span><b>+1,378%</b></div>
+<div class="figrow"><span>푸시 지연 중앙값</span><b>-80%</b></div>
+<div class="figrow"><span>머지 신뢰도</span><b>99.99%</b></div>
 </div>
-<p><b>볼 포인트</b> ─ 베타에서 드러나는 Qwen과 ChatGPT 간 응답 차이, 중국 외 지역 앱의 분기 테스트 필요성, 후속 Siri AI 일정.</p>
-</div>
-
-<div class="story">
-<div class="seclabel"></div>
-<div class="storyhead">크래프톤 루디 0.2… 의도를 읽는 로봇 AI</div>
-<div class="byline">크래프톤 · 루도 로보틱스 (10월 30일 BARS) · fnnews · 조선비즈</div>
-<p class="noindent">크래프톤의 로보틱스 연구법인 루도 로보틱스가 로봇용 AI 시스템 '루디 0.2'를 공개했다. 10월 30일 UC 버클리에서 열린 베이지역 로보틱스 심포지엄(BARS)에서 이강욱 크래프톤 CAIO 겸 루도 로보틱스 CTO가 발표했다. 지난 8월 루디 0.1의 후속이다. 핵심은 '사회적 지능'이다. 비전언어모델(VLM)을 기반으로 사람의 말과 몸짓, 대화 맥락을 파악하고, 작업 도중 지시가 바뀌거나 불분명해도 상황을 재판단해 동작을 수정한다. 지시가 불분명하면 질문으로 확인하는 방식도 포함된다.</p>
-<p>0.2에서 고도화된 다섯 갈래는 사람의 의도·피드백·사회적 신호에 반응하는 능력, 작업이나 상황이 바뀌어도 맥락을 유지하는 기억·추론, 그리고 이동·물체 조작의 연계다. 김창한 대표의 설명대로, 20년 가까이 게임으로 쌓은 실시간 상호작용 경험을 현실 로봇으로 확장한다는 구상이다. 다음 단계는 환경 인식·대화·물리적 행동을 하나의 모델로 통합하는 차세대 파운데이션 모델 '루디 1.0'이다. 팔로알토 본사 연구소도 공식 개소했다. 정량 벤치마크는 아직 공개되지 않았고, 학회 시연 단계라는 점은 감안해야 한다.</p>
-<div class="figbox">
-<div class="t">핵심 내용</div>
-<div class="figrow"><span>기반</span><b>VLM</b></div>
-<div class="figrow"><span>차기 모델</span><b>루디 1.0</b></div>
-<div class="figrow"><span>연구 거점</span><b>팔로알토</b></div>
-</div>
-<p><b>볼 포인트</b> ─ 루디 1.0의 통합 모델 공개 시기, 실환경 태스크 성공률 같은 정량 지표, 국내 피지컬 AI 정책과의 연결.</p>
-</div>
-
-<div class="story">
-<div class="seclabel"></div>
-<div class="storyhead">DeepSeek 크리에이터 모드… 채팅이 플러그인이 된다</div>
-<div class="byline">DeepSeek Harness (11월 2일) · Bloomberg</div>
-<p class="noindent">DeepSeek Harness에 크리에이터 모드가 나왔다. 아이디어를 평문으로 말하면 에이전트가 그대로 쓸 수 있는 플러그인을 만들어 설치·검증까지 한다. 공식 예시는 디자인 작업 공간, 샌드박스 게임, 3D LLM 시각화 도구, 3D 모델 렌더러, 영상 편집 워크벤치다. 제품 페이지의 데모에서는 한 줄 요청으로 떠다니는 뽀모도로 타이머 플러그인을 약 5분 30초 만에 만들고 설치·검증했다. Harness 자체가 "모든 것이 플러그인"이라는 설계라, 도구·스킬·인터페이스 일부까지 플러그인으로 갈아끼울 수 있다. MIT 라이선스, 전 세계 공개 프리뷰 상태다.</p>
-<p>주의점도 명확하다. Harness는 보안 감사를 받지 않은 실험 소프트웨어다. 모델이 만든 코드와 명령을 실행할 수 있고, 플러그인이나 프롬프트가 잘못되면 파일 손상이나 자격증명 유출이 가능하다고 안전 고지가 말한다. 호환성을 깨는 변경도 예고돼 있어, 오늘 만든 플러그인이 나중에 다시 손봐야 할 수 있다. 데스크톱 앱은 애플 실리콘 맥과 64비트 윈도우, 웹 인터페이스는 npx 한 줄로 실행한다. V4.1-Flash는 Harness용으로 최적화된 바 있다.</p>
 <div class="harnessbox">
 <div class="t">🔧 하네스 관점</div>
-네 하네스와 정반대 방향의 확장이다. 네 방식은 AGENTS.md 템플릿을 .env 변수로 렌더링하는 정적·검증 중심 하네스고, DeepSeek 방식은 런타임에 에이전트가 플러그인을 즉석에서 생성하는 동적 하네스다. 동적 생성은 빠르지만, 생성된 코드는 곧 코드 리뷰 대상이다. 네 듀얼 리뷰어 구조를 그대로 갖다 붙이면 "생성된 플러그인 검수"라는 새 용도가 된다. 단, 보안 감사 없는 프리뷰에 자격증명을 맡기진 말 것.
+듀얼 검수처럼 리뷰 에이전트를 병렬로 늘리는 구조는 검수 품질 이전에 Git·CI 경합을 먼저 키운다. 하네스 설계에 "검수 에이전트는 읽기 전용으로 돌리고, 쓰기는 한 경로로 모은다"는 원칙을 AGENTS.md에 명문화해 두면 Pando가 해결하려 한 문제의 소규모 버전을 사전에 피할 수 있다.
 </div>
-<p><b>볼 포인트</b> ─ 생성 플러그인의 품질·보안 검증 사례, 호환성 변경의 실제 빈도, Harness 정식 버전 일정.</p>
+<p><b>볼 포인트</b> ─ OpenAI의 업스트림 Git 기여가 일반 호스팅에 스며드는지, Scion과의 장기 운영 비용 비교 공개 여부. 자사 수치라 독립 검증은 아직 없다.</p>
+</div>
+
+<div class="story">
+<div class="seclabel"></div>
+<div class="storyhead">DeepSeek 슈퍼에이전트… 요청을 먼저 발견한다</div>
+<div class="byline">DeepSeek Harness 팀 (10월 31일) · MIT Sloan India</div>
+<p class="noindent">어제 다룬 슈퍼에이전트의 후속 정보다. 구조는 2층이다. Router가 들어오는 요청을 평가해 작업으로 승인할지 가리고, Worker가 별도 코딩 세션에서 실행해 PR 같은 결과물로 되돌려준다. 감시 대상은 GitHub 저장소 활동이고, 선택적으로 직장 메신저 Feishu 대화도 본다. 승인된 요청만 추적 가능한 작업으로 전환한다는 점이 포인트다. 경쟁 축이 '더 잘 코딩하기'에서 '요청을 먼저 발견하고 끝까지 챙기기'로 이동하고 있다는 신호다.</p>
+<p>다만 DeepSeek 스스로 "상용 제품이 아니라 연구용"이라 못 박았고, 공개 코드가 내부 구현과 다르며 일부 기능은 아직 개발 중이라고 밝혔다. 당장 프로덕션에 올릴 물건은 아니지만, '요청 접수 → 승인 → 작업 추적 → 결과 회신' 파이프라인 자체는 팀의 이슈 트리아지나 dependabot류 자동화에 바로 응용할 수 있는 형태다. 특히 승인 게이트를 에이전트 앞단이 아니라 Router 계층에 둔 설계는, 무분별한 자동 실행을 막으면서도 상주성은 유지하는 절충안으로 참고할 만하다.</p>
+<div class="harnessbox">
+<div class="t">🔧 하네스 관점</div>
+네 하네스는 사람이 Codex를 호출하면 AGENTS.md 지시문과 듀얼 검수가 동작하는 '호출형'이다. 슈퍼에이전트는 그 앞에 '무엇을 할지 고르는 Router'를 하나 더 얹은 형태라, 하네스를 상주형으로 확장한다면 Router 역할을 AGENTS.md에 "승인 기준 + 작업 단위 정의"로 명문화하는 것이 가장 자연스러운 접목점이다. 단, Router의 오판이 곧 잘못된 작업 실행으로 이어지므로 승인 로그와 되돌리기 경로를 검수 결과와 같은 수준으로 남기는 것이 전제다.
+</div>
+<p><b>볼 포인트</b> ─ 실제 GitHub 이슈 처리 성공률과 PR 머지율 같은 실측 평가, Feishu 외 Slack·Jira 연동 속도.</p>
+</div>
+
+<div class="story">
+<div class="seclabel"></div>
+<div class="storyhead">ElevenLabs 'Eleven Realtime'… 음성 조립을 하나로</div>
+<div class="byline">ElevenLabs (11월 3일) · 디지털데일리 · 파이낸셜뉴스</div>
+<p class="noindent">음성 에이전트를 만들려면 음성인식, 발화 구간 감지, 턴테이킹, LLM, 음성합성을 각각 골라 이어 붙여야 했다. ElevenLabs는 11월 3일 이 전부를 하나의 음성-대-음성 모델로 묶은 'Eleven Realtime'을 공개했다. 두 가지 버전이다. v1 Mini는 빠르고 자연스러운 대화용(AI 비서, 교육 튜터, 게임 캐릭터), v1 Max는 정해진 절차에 따라 정보를 조회하고 도구를 호출하는 다단계 작업용(고객 지원, 리드 선별)이다. 끼어들기 대응, 도구 호출, 자연스러운 턴 전환을 공통 지원하고, 한국어·일본어 포함 90개 이상 언어, 1만 7,000개 이상 보이스 라이브러리를 지원한다.</p>
+<p>제3자 평가기관 Artificial Analysis(10월 기준)에 따르면 Max는 Big Bench Audio에서 98.8% 정확도, 질문 종료 후 답변 시작까지 0.57초, Full Duplex Bench는 Mini 95.8%·Max 94.1%였다. 제공 경로는 Eleven Agents 플랫폼과 OpenAI Realtime API 호환 WebSocket API이며, 출시 시점에는 WebRTC를 지원하지 않는다. 음성 에이전트의 진입 장벽이 '파이프라인 설계 능력'에서 '모델 선택과 프롬프트·도구 설계'로 이동했다는 점이 핵심이다. 다만 가격 정보는 이번 발표에서 확인되지 않았으니(확인 필요), 상용 투입 전 분당·호출당 단가를 따로 확인해야 한다.</p>
+<div class="figbox">
+<div class="t">핵심 수치</div>
+<div class="figrow"><span>Max 정확도</span><b>98.8%</b></div>
+<div class="figrow"><span>답변 시작 지연</span><b>0.57초</b></div>
+<div class="figrow"><span>지원 언어</span><b>90개 이상</b></div>
+</div>
+<p><b>볼 포인트</b> ─ 한국어 실제 품질(평가 수치는 다국어 평균 성격), WebRTC 지원 시점, 가격표 공개 후 조립형 대비 총비용 비교.</p>
+</div>
+
+<div class="story">
+<div class="seclabel"></div>
+<div class="storyhead">오늘 베타 시작… 중국판 애플 인텔리전스</div>
+<div class="byline">Apple · Alibaba (10월 31일) · 연합뉴스 · 나우뉴스</div>
+<p class="noindent">어제 다룬 중국판 애플 인텔리전스의 베타가 오늘(11월 4일) 시작된다. 12월 iOS 27.3 정식 출시와 함께 중국 사용자에게 제공된다. Siri, 글쓰기 도구, 시각 지능 등에서 알리바바 Qwen이 텍스트·이미지 이해와 생성을 일부 지원하고, 애플 자체 파운데이션 모델이 핵심 경험을 맡고 Qwen은 클라우드 기반 일부 기능을 보완하는 구조다. 기능별 라우팅 세부 사항은 공개되지 않았다. 대상은 중국에서 애플 인텔리전스 지원 아이폰을 구매하고 기기 위치와 계정 국가가 모두 중국인 사용자로 한정되며, 아이폰 15 프로 이후 모델이 해당한다.</p>
+<p>WWDC 2026에서 공개된 차세대 Siri AI와 화면 인식·크로스앱 에이전트 기능은 이번 중국판에 포함되지 않는다. 중국 국가인터넷정보판공실(CAC)은 올해 7월 애플 인텔리전스를 신규 승인 사업자 명단에 올렸고, 연합뉴스 보도에 따르면 사용자의 질문·답변은 알리바바 모델 훈련에 쓰지 않는다고 한다. 글로벌 AI 제품이 지역 규제에 맞춰 파운데이션 모델 자체를 갈아끼우는 선례가 본격화된 것이다. 중국 외 지역은 ChatGPT, 중국은 Qwen이라는 이중 구조는, AI 기능의 국가별 분기·라우팅·프라이버시 경계 설계가 제품 아키텍처의 일급 관심사가 된다는 뜻이다. Anthropic이 Qwen 측의 대규모 증류 시도를 주장한 바 있다는 나우뉴스 보도도 함께 따라다닌다.</p>
+<p><b>볼 포인트</b> ─ 오늘 시작되는 개발자 베타 피드백에서 실제 라우팅 범위와 품질이 얼마나 드러나는지, 아이패드·맥 지원 추가 승인 시기, 차세대 Siri의 중국판 합류 시점.</p>
 </div>
 
 </div><!-- /cols3 -->
 
 <hr class="rule">
 
-<div class="briefhead">📌 단신 · 다가오는 일정</div>
+<div class="briefhead">📌 단신</div>
 <div class="briefs">
-■ <b>Kimi K3.1 Pro 가중치 공개 내일 11월 4일</b> ─ Moonshot 예고 일정. 오픈 웨이트 공개 여부 주목. <span style="color:#888;font-size:12px">Moonshot 발표 (10월 23일)</span><br>
-■ <b>Anthropic IPO 로드쇼 11월 9일 주 예정</b> ─ S-1 공개 제출(10월 26일) 이후 일정, 11월 중순 상장 목표 보도. <span style="color:#888;font-size:12px">WSJ 보도</span><br>
-■ <b>Opus 4.8 fast mode 제거 11월 30일</b> ─ 이후 fast mode 요청은 에러, 폴백 없음. Opus 5.5로 이전 필요. <span style="color:#888;font-size:12px">Claude Code 2.1.316 릴리스 노트</span>
+■ <b>ChatGPT·Codex 사용량, 12월부터 한 통으로</b> ─ OpenAI가 Chat·Work 탭을 합치고 Plus·Pro·Business 요금제의 토큰 허용량을 ChatGPT와 Codex가 공유하도록 변경. 인스턴트 채팅 제외, 정확한 날짜와 요금제별 수치는 미공개. <span style="color:#888;font-size:12px">TechCrunch (11월 2일)</span><br>
+■ <b>Claude Code 2.1.317</b> ─ 게이트웨이 관리 API에 비용 보고서 추가, 실패한 Agent SDK 훅 콜백이 동작을 차단 가능, 도구 호출이 계정 이메일을 외부로 보내기 전 확인 절차 추가 등 운영·통제 강화. <span style="color:#888;font-size:12px">Tools Network 정리 (11월 3일)</span><br>
+■ <b>agent-desktop 1.1</b> ─ 어제 다룬 Vercel Labs의 데스크톱 조작 CLI가 하루 만에 GitHub 스타 2,275개. Windows 오버레이 수정과 macOS Dock·메뉴바 접근이 이번 버전 내용. <span style="color:#888;font-size:12px">GitHub (11월 3일)</span><br>
+■ <b>골드만삭스, 비개발직 AI 코딩 도구 차단</b> ─ Claude Code와 GitHub Copilot 사용을 엔지니어로 제한. '실험 단계 종료'와 생산성·리스크 관리가 이유. 비개발직 바이브 코딩 확산에 제동이 걸리는 사례. <span style="color:#888;font-size:12px">외신 (11월 3일)</span><br>
+■ <b>Kimi K3.1 Pro 가중치 공개 오늘 11월 4일</b> ─ Moonshot 예고 일정. <span style="color:#888;font-size:12px">Moonshot 발표 (10월 23일)</span>
 </div>
 
 </div><!-- /front -->
 
 <div class="colophon">
-<span>AI 뉴스 심층 브리핑 · 템플릿 v2 (신문 지면형) · 2026-11-03</span>
+<span>AI 뉴스 심층 브리핑 · 템플릿 v2 (신문 지면형) · 2026-11-04</span>
 <span>매일 아침 08:10 KST 발행</span>
 </div>
 
